@@ -277,24 +277,10 @@ void GUIChatConsole::animate(u32 msec)
 void GUIChatConsole::drawBackground()
 {
 	video::IVideoDriver* driver = Environment->getVideoDriver();
-	if (m_background != NULL)
-	{
-		core::rect<s32> sourcerect(0, -m_height, m_screensize.X, 0);
-		driver->draw2DImage(
-			m_background,
-			v2s32(0, 0),
-			sourcerect,
-			&AbsoluteClippingRect,
-			m_background_color,
-			false);
-	}
-	else
-	{
-		driver->draw2DRectangle(
-			m_background_color,
-			core::rect<s32>(0, 0, m_screensize.X, m_height),
-			&AbsoluteClippingRect);
-	}
+	driver->draw2DRectangle(
+		m_background_color,
+		core::rect<s32>(0, 0, m_screensize.X, m_height),
+		&AbsoluteClippingRect);
 }
 
 void GUIChatConsole::drawText()
