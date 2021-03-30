@@ -119,7 +119,7 @@ private:
 	// background texture
 	video::ITexture *m_background = nullptr;
 	// background color (including alpha)
-	video::SColor m_background_color = video::SColor(255, 0, 0, 0);
+	video::SColor m_background_color = video::SColor(127, 0, 0, 0);
 
 	// font
 	gui::IGUIFont *m_font = nullptr;
